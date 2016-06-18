@@ -1,0 +1,38 @@
+[
+    {
+        "id": "deadbeef1",
+        "title": "Поговори со мной",
+        "latitude": 55.752141,
+        "longtitude": 37.6143558
+    },
+    {
+        "id": "deadbeef2",
+        "title": "Ололо",
+        "latitude": 55.752141,
+        "longtitude": 37.6143558
+    },
+    {
+        "id": "deadbeef3",
+        "title": "Я в домике",
+        "latitude": 55.75111,
+        "longtitude": 37.613486
+    },
+    {
+        "id": "deadbeef3",
+        "title": "Пыщ пыщ",
+        "latitude": 55.751038,
+        "longtitude": 37.609066
+    },
+    {
+        "id": "deadbeef4",
+        "title": "Пепяка ололо, Онотоле попячься!",
+        "latitude": 55.755216,
+        "longtitude": 37.611684
+    },
+    {
+        "id": "deadbeef5",
+        "title": "test",
+        "latitude": 55.755192,
+        "longtitude": 37.619923
+    }
+]
