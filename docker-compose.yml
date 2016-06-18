@@ -4,9 +4,25 @@ services:
     image: "nginx:1.11.1"
     ports:
       - "443:443"
-    network_mode: "host"
+    depends_on:
+      - backend
+    links:
+      - backend
     volumes:
       - "/etc/letsencrypt/archive/api.geochats.insanecoders.ru:/etc/nginx/ssl:ro"
       - "./api/nginx.conf:/etc/nginx/nginx.conf:ro"
       - "./api/conf.d:/etc/nginx/conf.d:ro"
-      - "./api/mocks:/var/lib/geochats/api:ro"
+  backend:
+    build:
+      context: backend
+    hostname: backend
+    depends_on:
+      - storage
+    links:
+      - storage
+    environment:
+      DATABASE_ADDR: "mongodb://storage"
+      DATABASE_NAME: "geochats"
+      LISTEN_ADDR: "0.0.0.0:3000"
+  storage:
+    image: "mongo:3.3.8"
